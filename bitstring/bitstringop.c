@@ -11,7 +11,8 @@ void intersection();
 void difference();
 void reset();
 
-void main(){
+void main()
+{
 	int choice = 0;
 	
 	while(choice != 5){
@@ -35,7 +36,8 @@ void main(){
 	}
 }
 
-void input(){
+void input()
+{
 	reset(); // to reset old sets if any
 	int size, x;
 	printf("\nEnter size of first set (max 9) : ");
@@ -58,19 +60,23 @@ void input(){
 	
 }
 
-void output(int s[]){
+void output(int s[])
+{
 	printf("\n{ ");
-	for(int i = 0; i < 9; i++){
-		if(s[i] == 1){
+	for(int i = 0; i < 9; i++)
+	{
+		if(s[i] == 1)
+		{
 			printf("%d, ", i+1);
 		}
 	}
 	printf(" }");	
 }
 
-void setUnion(){
-	int uni[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-	for(int i = 0; i < 9; i++){
+void setUnion()
+		{
+		int uni[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+		for(int i = 0; i < 9; i++){
 		if(a[i] == 1 || b[i] == 1){
 			uni[i] = 1;
 		}
@@ -79,9 +85,10 @@ void setUnion(){
 	output(uni);
 }
 
-void intersection(){
-	int inter[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-	for(int i = 0; i < 9; i++){
+void intersection()
+		{
+		int inter[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+		for(int i = 0; i < 9; i++){
 		if(a[i] == 1 && b[i] == 1){
 			inter[i] = 1;
 		}
@@ -90,7 +97,8 @@ void intersection(){
 	output(inter);	
 }
 
-void difference(){
+void difference()
+	{
 	int diff[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 	
 	for(int i = 0; i < 9; i++){
@@ -103,7 +111,8 @@ void difference(){
 	printf("\nDiffernce ( set_1 - set_2 )\n_____________________________\n");
 	output(diff);
 }
- void reset(){
+ void reset()
+ 	{
  	// to reset a and b to empty set
  	for(int i = 0; i < 9; i++){
 		a[i] = 0;
